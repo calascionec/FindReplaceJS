@@ -14,11 +14,11 @@
       <form id="find-replace">
         <div class="form-group">
           <label for="string-to-search">Enter string to search:</label>
-          <input id="string-to-search" class="form-control" type="text">
+          <input id="string-to-search" class="form-control" type="text" required>
         </div>
         <div class="form-group">
           <label for="find-string">Enter word to find:</label>
-          <input id="find-string" class="form-control" type="text">
+          <input id="find-string" class="form-control" type="text" required>
         </div>
         <div class="form-group">
           <label for="replace-string">Enter word to replace:</label>
@@ -30,6 +30,9 @@
 
       <div id="result">
         <p>"<span class="string-to-search"></span>" is converted to "<span class="replaced-string"></span>".</p>
+      </div>
+      <div id="result2">
+        <p>"<span class="find-string"></span>" is <span class="not"></span> contained in "<span class="string-to-search"></span>" and no replacement word was given.</p>
       </div>
     </div>
   </body>

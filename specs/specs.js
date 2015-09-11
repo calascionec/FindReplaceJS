@@ -10,4 +10,8 @@ describe("findReplace", function() {
     it("search a multiple word string for a word, if found will replace with another word", function(){
         expect(findReplace("This is a test sentence", "sentence", "string")).to.equal("This is a test string");
     });
+
+    it("Will keep punctuation while still able to change given word", function(){
+        expect(findReplace("This, test, has, a lot, of unnecessary, commas!", "commas", "punctuation")).to.equal("This, test, has, a lot, of unnecessary, punctuation!");
+    });
 });
