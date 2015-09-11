@@ -1,13 +1,18 @@
 var findReplace = function(stringToSearch, findString, replaceString) {
+    var stringToSearchArray = stringToSearch.split(" ");
     if (!replaceString) {
-        if (stringToSearch === findString) {
+        if (stringToSearchArray.indexOf(findString) != -1) {
             return true;
         } else {
             return false;
         }
     }
-    if (stringToSearch === findString) {
-        stringToSearch = replaceString;
-        return stringToSearch;
+    for(var i = 0; i < stringToSearchArray.length ; i++) {
+        if (stringToSearchArray[i] === findString) {
+            stringToSearchArray[i] = replaceString;
+        }
     }
+    return stringToSearchArray.join(" ");
+
+
 };
